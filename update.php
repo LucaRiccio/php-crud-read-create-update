@@ -6,7 +6,7 @@
 ?>
 
 <div class="container p-3">
-  <form action="index.html" method="post">
+  <form action="partials/update/server-edit.php" method="post">
     <div class="form-group">
       <label for="roomNumber">Numero della stanza</label>
       <input type="text" class="form-control" name="roomNumber" value="<?php echo $row['room_number']; ?>" id="roomNumber">
