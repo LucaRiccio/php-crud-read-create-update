@@ -12,7 +12,7 @@
   $result = $conn->query($sql);
 
   if ($result) {
-    echo "Voce cancellata";
+    header("Location: $basepath/index-php.php?roomId=$id");
   }else {
     echo "Voce non cancellata";
   }

@@ -5,9 +5,15 @@ include __DIR__ . '/partials/home/server.php';
 
 ?>
 
-  <body>
+  <!-- <body> --> <!--Tolto e messo in header-->
 
-    <div class="container">
+    <div class="container"> <!--apertura container-->
+      <?php if (!empty($_GET['roomId'])){
+        $stanza_cancellata = $_GET['roomId'];?>
+        <div class="alert">
+          <?php echo "Hai cancellato la stanza numero: $stanza_cancellata"; ?>
+        </div>
+      <?php } ?>
       <table class="table">
         <thead>
           <tr>
@@ -37,7 +43,5 @@ include __DIR__ . '/partials/home/server.php';
         <?php } ?>
         </tbody>
       </table>
-    </div>
-
-  </body>
-</html>
+    </div> <!--chiusura container-->
+    <?php include __DIR__ . '/partials/templates/footer.php'; ?>
